@@ -453,22 +453,35 @@ main{
 
 #three{
   display: flex;
+  align-items: stretch;
   background: #ADB5BD;
-  height: auto;
   width: 100%;
 }
 
 .contact{
-  display: inline-block;
-  flex: 1;
-  margin-left: 3%;
+  display: block;
+  flex:1;
+  padding-left: 2rem;
   padding-top: 2%;
-  width: 30%;
+  padding-bottom: 10em;
 }
 
 .contact > h2{
   font: 2.5rem "Rubik", sans-serif;
   font-weight: 550;
+}
+
+.contact-content{
+  width: 100%;
+  display: block;
+  font: 1.3em "Rubik", sans-serif;
+  line-height: 1.8;
+}
+
+.contact-content > h2{
+  display:inline-block;
+  padding-bottom: 1px;
+  border-bottom: 2.5px solid #212529;
 }
 
 .contact > :first-child:after {
@@ -480,81 +493,50 @@ main{
 	width: 23%;
 }
 
-.contact-content{
-  font: 1.3em "Rubik", sans-serif;
-  line-height: 1.8;
-}
-
-.contact-content > h2:after {
-	content: '';
-	background-color: #212529;
-	display: block;
-	height: 2px;
-	margin: 0.325em 0 0 0;
-	width: 50%;
-}
-
 .magnifyBtn {
-    padding: 5% 7%;
-    margin-left: 5%;
-    background-color: #CED4DA;
-    color: hsl(243, 80%, 62%);
-    font: 1.2rem "Inter",sans-serif;
-    border-radius: 6px;
-    transition: transform 250ms ease-in-out;
+  padding: 5% 7%;
+  margin-left: 5%;
+  background-color: #CED4DA;
+  color: hsl(243, 80%, 62%);
+  font: 1.2rem "Inter",sans-serif;
+  border-radius: 6px;
+  transition: transform 250ms ease-in-out;
 }
 
 .magnifyBtn:hover {
-    transform: scale(1.10);
+  transform: scale(1.10);
 }
 
 .magnifyBtn:active {
-    transform: scale(.9);
+  transform: scale(.9);
 }
-
 
 .social_media_div{
-  display: inline-block;
-  float: right;
-  flex: 1;
-  width: 60%;
-  height: auto;
-  margin: 0;
-  background: #ffffff;
+  display: block;
+  background: #343A40;
+  flex:1;
 }
 
-#social_media {
-	position: relative;
-  width: 100%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	margin: 0;
-	overflow: hidden;
+.social_media_image{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
+
+#social_media{
+  background: yellow;
+  position: relative;
+  width: 100%;
+  padding-bottom: 125%;
+  vertical-align: middle;
+  margin: 0;
+  overflow: hidden;
+}
+
 #social_media svg {
 	display: inline-block;
 	position: absolute;
 	top: 0; left: 0;
-}
-
-.social_media_cover{
-  position: absolute;
-  text-align: center;
-  display: block;
-  background: #343A40;
-  color: #F8F9FA;
-  height: 15%;
-  margin-top: 34%;
-  padding-bottom: 8px;
-  margin-left: 51.5%;
-  width:48.5%;
-}
-
-.social_media_cover > h2{
-  font: 2.5rem "Rubik", sans-serif;
-  font-weight: 550;
-  padding-top: 5%;
-  vertical-align: middle;
 }
 
 .footer{
