@@ -1,6 +1,7 @@
 body{
   position: relative;
   background: #F8F9FA;
+  height:100%;
 }
 
 a, a:link {
@@ -608,5 +609,5 @@ dfn:hover::before {top: 20px;}
 .article{
   position: relative;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
