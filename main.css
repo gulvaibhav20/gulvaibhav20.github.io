@@ -9,7 +9,8 @@ a, a:link {
 }
 
 main{
-  height: 200%;
+  display: block;
+  height: auto;
   width: 100%;
 }
 
@@ -602,4 +603,10 @@ dfn:hover::before {top: 20px;}
   background-image: url("images/soon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.article{
+  position: relative;
+  width: 100%;
+  overflow: auto;
 }
