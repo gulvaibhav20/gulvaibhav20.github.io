@@ -209,7 +209,7 @@ main {
     transform: scale(0.1, 1);
 }
 
-#one {
+#about-me {
     display: block;
     margin-top: 5%;
     background: #e9ecef;
@@ -249,7 +249,7 @@ main {
     text-align: justify;
 }
 
-#two {
+#projects {
     display: block;
     background: #ced4da;
     height: auto;
@@ -460,7 +460,7 @@ main {
     transition: 0.4s;
 }
 
-#three {
+#social-media-handles {
     display: flex;
     align-items: stretch;
     background: #adb5bd;
