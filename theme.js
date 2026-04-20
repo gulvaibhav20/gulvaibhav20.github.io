@@ -18,6 +18,51 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Mobile nav (hamburger) toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mainMenu = document.getElementById("main-menu");
+    if (navToggle && mainMenu) {
+        const closeMenu = () => {
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open navigation menu");
+            mainMenu.classList.remove("is-open");
+        };
+        const openMenu = () => {
+            navToggle.setAttribute("aria-expanded", "true");
+            navToggle.setAttribute("aria-label", "Close navigation menu");
+            mainMenu.classList.add("is-open");
+        };
+        navToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+            isOpen ? closeMenu() : openMenu();
+        });
+        mainMenu.addEventListener("click", (e) => {
+            if (e.target.closest("a")) closeMenu();
+        });
+        document.addEventListener("click", (e) => {
+            if (
+                mainMenu.classList.contains("is-open") &&
+                !mainMenu.contains(e.target) &&
+                !navToggle.contains(e.target)
+            ) {
+                closeMenu();
+            }
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeMenu();
+        });
+        const desktopMQ = window.matchMedia("(width > 768px)");
+        const onMQChange = (e) => {
+            if (e.matches) closeMenu();
+        };
+        if (desktopMQ.addEventListener) {
+            desktopMQ.addEventListener("change", onMQChange);
+        } else {
+            desktopMQ.addListener(onMQChange);
+        }
+    }
+
     // Experience accordion: single-expanded (click one to open, others auto-close)
     document.addEventListener("click", (e) => {
         const header = e.target.closest(".exp-header");
