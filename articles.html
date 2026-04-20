@@ -1,9 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="Description"
-            content="Vaibhav Gulati is a Software Developer and Technical Writer from India. He is certified in IT Automation by Google. He develops useful software solutions along with their walkthroughs."
+            content="Articles and technical content written by Vaibhav Gulati on software development, data structures, design patterns, and programming."
         />
         <meta
             name="google-site-verification"
@@ -11,9 +13,19 @@
         />
         <meta
             name="Keywords"
-            content="Vaibhav, Gulati, Python, Software, Development, Generative-AI, Portfolio, Blogs"
+            content="Vaibhav, Gulati, Articles, Technical Writing, Design Patterns, Python, Java, DBMS"
         />
-        <title>Vaibhav Gulati's Portfolio</title>
+        <meta property="og:title" content="Vaibhav Gulati - Articles" />
+        <meta property="og:description" content="Technical articles on software development, data structures, design patterns, and programming." />
+        <meta property="og:image" content="https://gulvaibhav20.github.io/images/social_media_cover.png" />
+        <meta property="og:url" content="https://gulvaibhav20.github.io/articles.html" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#1a1d20" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="favicon.png" />
+        <link rel="manifest" href="site.webmanifest" />
+        <title>Vaibhav Gulati - Writing</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -22,394 +34,189 @@
         />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link rel="stylesheet" href="main.css" />
         <script>
-            window.onload = function () {};
+            (function () {
+                const saved = localStorage.getItem("theme");
+                document.documentElement.setAttribute("data-theme", saved || "dark");
+            })();
         </script>
-        <style>
-            .card {
-                float: left;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                transition: 0.3s;
-                width: 30%;
-                border-radius: 5px;
-                overflow: hidden;
-                margin-left: 2.5%;
-                margin-top: 2.5%;
-                margin-bottom: 3%;
-            }
-            .card img {
-                height: 150px;
-                object-fit: cover;
-            }
-            .card:hover {
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            }
-            img {
-                border-radius: 5px 5px 0 0;
-            }
-            .container {
-                padding: 2px 16px;
-            }
-        </style>
+        <link rel="stylesheet" href="main.css" />
+        <script src="theme.js" defer></script>
     </head>
     <body>
+        <svg class="svg-sprite" aria-hidden="true">
+            <symbol id="icon-moon" viewBox="0 0 16 16">
+                <path d="M8.067 14.667a6.5 6.5 0 0 1-2.625-.534 6.9 6.9 0 0 1-2.134-1.441 6.9 6.9 0 0 1-1.441-2.134 6.5 6.5 0 0 1-.534-2.625q0-2.433 1.55-4.291 1.55-1.86 3.95-2.309-.3 1.65.184 3.225a6.6 6.6 0 0 0 1.666 2.759 6.6 6.6 0 0 0 2.759 1.666 6.7 6.7 0 0 0 3.225.184q-.435 2.4-2.3 3.95-1.867 1.55-4.3 1.55m0-1.334q1.466 0 2.716-.733a5.3 5.3 0 0 0 1.967-2.017 8.3 8.3 0 0 1-2.717-.725 7.9 7.9 0 0 1-2.3-1.608 8 8 0 0 1-1.616-2.3A7.9 7.9 0 0 1 5.4 3.233a5.2 5.2 0 0 0-2.008 1.975 5.37 5.37 0 0 0-.725 2.725q0 2.25 1.575 3.825t3.825 1.575" fill="currentColor" />
+            </symbol>
+            <symbol id="icon-sun" viewBox="0 0 16 16">
+                <path d="M7.273 2.91V0h1.454v2.91zm4.836 2-1-1 2.037-2.092 1.018 1.037zm.982 3.817V7.273H16v1.454zM7.273 16v-2.91h1.454V16zM3.89 4.873 1.818 2.855l1.037-1.019 2.054 2.055zm9.236 9.309L11.11 12.09l.982-.982 2.073 2zM0 8.727V7.273h2.91v1.454zm2.855 5.455-1.019-1.037 2.037-2.036.527.491.527.51zM8 12.364q-1.818 0-3.09-1.273Q3.635 9.818 3.635 8T4.91 4.91Q6.182 3.635 8 3.635t3.09 1.273Q12.365 6.182 12.365 8t-1.273 3.09Q9.818 12.365 8 12.365m0-1.455q1.2 0 2.055-.854.854-.855.854-2.055t-.854-2.055A2.8 2.8 0 0 0 8 5.091q-1.2 0-2.055.854A2.8 2.8 0 0 0 5.091 8q0 1.2.854 2.055.855.854 2.055.854" fill="currentColor" />
+            </symbol>
+        </svg>
         <header class="header">
             <div class="logo_div">
                 <a href="index.html" class="logo"><strong>VG</strong> <span>Portfolio</span></a>
             </div>
-            <div class="main-menu">
-                <a href="index.html" class="nav_item">Home</a>
+            <nav class="main-menu">
                 <a href="index.html#about-me" class="nav_item">About</a>
+                <a href="index.html#experience" class="nav_item">Experience</a>
                 <a href="index.html#projects" class="nav_item">Projects</a>
-                <a href="index.html#social-media-handles" class="nav_item">Contact</a>
-                <a href="articles.html" class="nav_item">Articles</a>
-                <a target="_blank" href="https://gulvaibhav20.hashnode.dev" class="nav_item">
-                    Blogs</a
-                >
-                <!-- <a href="coming_soon.html" class="nav_item">Sponsor</a> -->
-            </div>
+                <a href="articles.html" class="nav_item">Writing</a>
+                <a href="index.html#social-media-handles" class="nav-cta">Contact</a>
+            </nav>
+            <label class="theme-toggle-label" aria-label="Toggle theme">
+                <input id="theme-toggle" class="toggle" type="checkbox" />
+                <span class="toggle-thumb">
+                    <svg class="toggle-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-moon"></use></svg>
+                    <svg class="toggle-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-sun"></use></svg>
+                </span>
+            </label>
         </header>
-        <div class="banner" align="center">
-            <div class="intro">
-                <h1>Articles</h1>
-                <div class="intro-content" style="margin: 0; padding: 0">
-                    <p>My Content Writing Work.</p>
+        <main>
+            <div class="banner articles-banner">
+                <div class="intro">
+                    <h1>Writing.</h1>
+                    <div class="intro-content articles-intro">
+                        <p>Technical articles, deep-dives, and blog posts.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="article">
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/design-patterns/behavioral-pattern/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/behavioral-pattern.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif">
-                        <b>Behavioral Design Patterns</b>
-                    </h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        5 Sep 2022 - 8 mins read
-                    </h4>
+            <a class="writing-banner" href="https://gulvaibhav20.hashnode.dev" target="_blank" rel="noopener noreferrer">
+                <div class="writing-banner-content">
+                    <p class="writing-banner-label">Blog</p>
+                    <h2 class="writing-banner-title">I also write on Hashnode</h2>
+                    <p class="writing-banner-desc">Personal blog with deep-dives on data engineering, GenAI, and system design.</p>
                 </div>
+                <span class="writing-banner-cta">Visit Blog →</span>
+            </a>
+            <h2 class="writing-section-title">Articles on Scaler Topics</h2>
+            <div class="article">
+                <a class="card" href="https://www.scaler.com/topics/design-patterns/behavioral-pattern/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/behavioral-pattern.webp" alt="Behavioral Design Patterns article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Behavioral Design Patterns</h3>
+                        <p class="card-meta"><time datetime="2022-09-05">5 Sep 2022</time> · 8 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/util-package-in-java/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/java-util-package-in-java.webp" alt="java.util Package in Java article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">java.util Package in Java</h3>
+                        <p class="card-meta"><time datetime="2022-08-03">3 Aug 2022</time> · 5 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/multimedia-database/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/multimedia-database.webp" alt="Multimedia Database article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Multimedia Database</h3>
+                        <p class="card-meta"><time datetime="2022-07-13">13 Jul 2022</time> · 5 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/reverse-an-array-in-java/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/reverse-an-array-in-java.webp" alt="Reverse an Array in Java article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Reverse an Array in Java</h3>
+                        <p class="card-meta"><time datetime="2022-07-01">1 Jul 2022</time> · 7 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/palindrome-program-in-cpp/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/palindrome-program-in-cpp.webp" alt="Palindrome Program in C++ article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Palindrome Program in C++</h3>
+                        <p class="card-meta"><time datetime="2022-06-30">30 Jun 2022</time> · 7 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/proxy-design-pattern/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/proxy-design-pattern.webp" alt="Proxy Design Pattern article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Proxy Design Pattern</h3>
+                        <p class="card-meta"><time datetime="2022-06-13">13 Jun 2022</time> · 14 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/what-are-design-patterns/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/what-are-design-pattern.webp" alt="What are Design Patterns article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">What are Design Patterns?</h3>
+                        <p class="card-meta"><time datetime="2022-06-13">13 Jun 2022</time> · 7 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/what-is-list-in-python/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/what-is-list-in-python.webp" alt="What is List in Python article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">What is List in Python?</h3>
+                        <p class="card-meta"><time datetime="2022-05-18">18 May 2022</time> · 14 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/bridge-design-pattern/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/bridge-design-pattern.webp" alt="Bridge Design Pattern article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Bridge Design Pattern</h3>
+                        <p class="card-meta"><time datetime="2022-04-25">25 Apr 2022</time> · 14 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/data-structures/avl-tree/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/avl-tree.webp" alt="AVL Trees article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">AVL Trees</h3>
+                        <p class="card-meta"><time datetime="2022-04-08">8 Apr 2022</time> · 32 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/two-dimensional-array-in-java/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/two-dimensional-array-in-java.webp" alt="Two Dimensional Array in Java article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Two Dimensional Array in Java</h3>
+                        <p class="card-meta"><time datetime="2022-04-08">8 Apr 2022</time> · 10 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/splitlines-in-python/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/splitlines-in-python.webp" alt="splitlines() in Python article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">splitlines() in Python</h3>
+                        <p class="card-meta"><time datetime="2022-03-30">30 Mar 2022</time> · 6 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/translate-in-python/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/translate-in-python.webp" alt="translate() in Python article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">translate() in Python</h3>
+                        <p class="card-meta"><time datetime="2022-03-11">11 Mar 2022</time> · 6 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/dbms/relational-model-in-dbms/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/relational-model-in-dbms.webp" alt="Relational Model in DBMS article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Relational Model in DBMS</h3>
+                        <p class="card-meta"><time datetime="2022-01-24">24 Jan 2022</time> · 10 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/database-languages-in-dbms/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/Database-Languages-featured-image.webp" alt="Database Languages article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Database Languages</h3>
+                        <p class="card-meta"><time datetime="2022-01-24">24 Jan 2022</time> · 11 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/dbms/dbms-architecture/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/dbms-architecture.webp" alt="DBMS Architecture article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">DBMS Architecture</h3>
+                        <p class="card-meta"><time datetime="2022-01-13">13 Jan 2022</time> · 7 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/palindrome-in-python/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/Palindrome-in-python.webp" alt="Palindrome in Python article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Palindrome in Python</h3>
+                        <p class="card-meta"><time datetime="2021-12-22">22 Dec 2021</time> · 10 mins read</p>
+                    </div>
+                </a>
+                <a class="card" href="https://www.scaler.com/topics/remove-duplicates-from-list-python/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scaler.com/topics/images/remove-duplicates-from-list-python.webp" alt="Remove Duplicates From List Python article" loading="lazy" />
+                    <div class="container">
+                        <h3 class="card-title">Remove Duplicates From List Python</h3>
+                        <p class="card-meta"><time datetime="2021-12-21">21 Dec 2021</time> · 17 mins read</p>
+                    </div>
+                </a>
             </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/util-package-in-java/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/java-util-package-in-java.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>java.util Package in Java</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        3 Aug 2022 - 5 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/multimedia-database/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/multimedia-database.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Multimedia Database</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        13 Jul 2022 - 5 mins read
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="article">
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/reverse-an-array-in-java/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/reverse-an-array-in-java.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Reverse an Array in Java</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        1 Jul 2022 - 7 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/palindrome-program-in-cpp/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/palindrome-program-in-cpp.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Palindrome Program in C++</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        30 Jun 2022 - 7 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/proxy-design-pattern/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/proxy-design-pattern.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Proxy Design Pattern</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        13 Jun 2022 - 14 mins read
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="article">
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/what-are-design-patterns/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/what-are-design-pattern.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>What are Design Patterns?</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        13 Jun 2022-7 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/what-is-list-in-python/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/what-is-list-in-python.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>What is List in Python?</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        18 May 2022 - 14 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/bridge-design-pattern/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/bridge-design-pattern.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Bridge Design Pattern</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        25 Apr 2022 - 14 mins read
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="article">
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/data-structures/avl-tree/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/avl-tree.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>AVL Trees</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        8 Apr 2022 - 32 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/two-dimensional-array-in-java/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/two-dimensional-array-in-java.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif">
-                        <b>Two Dimensional Array in Java</b>
-                    </h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        8 Apr 2022 - 10 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/splitlines-in-python/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/splitlines-in-python.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>splitlines() in Python</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        30 Mar 2022 - 6 mins read
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="article">
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/translate-in-python/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/translate-in-python.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>translate() in Python</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        11 Mar 2022 - 6 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/dbms/relational-model-in-dbms/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/relational-model-in-dbms.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Relational Model in DBMS</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        24 Jan 2022 - 10 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/databse-languages-in-dbms/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/Database-Languages-featured-image.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Database Languages</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        24 Jan 2022 - 11 mins read
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="article">
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/dbms/dbms-architecture/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/dbms-architecture.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>DBMS Architecture</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        13 Jan 2022 - 7 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/palindrome-in-python/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/Palindrome-in-python"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif"><b>Palindrome in Python</b></h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        22 Dec 2021 - 10 mins read
-                    </h4>
-                </div>
-            </div>
-            <div
-                class="card"
-                onclick="window.open('https://www.scaler.com/topics/remove-duplicates-from-list-python/','_blank');"
-                style="cursor: pointer"
-            >
-                <img
-                    src="https://scaler.com/topics/images/remove-duplicates-from-list-python.webp"
-                    alt="Avatar"
-                    style="width: 100%"
-                />
-                <div class="container">
-                    <h2 style="font: 2vw 'Roboto', sans-serif">
-                        <b>Remove Duplicates From List Python</b>
-                    </h2>
-                    <h4 style="font: 1.2vw 'Rubik', sans-serif; font-weight: 550">
-                        21 Dec 2021 - 17 mins read
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="footer" style="margin-top: 0; position: absolute">
-            <div class="footer-text">
-                <center>© 2025 Vaibhav Gulati. All rights reserved.</center>
-            </div>
-        </div>
+        </main>
     </body>
 </html>

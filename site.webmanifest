@@ -1,0 +1,12 @@
+{
+    "name": "Vaibhav Gulati's Portfolio",
+    "short_name": "VG",
+    "description": "Data Engineer and Technical Content Writer from India.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8f9fa",
+    "theme_color": "#f8f9fa",
+    "icons": [
+        { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+    ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gulvaibhav20.github.io/sitemap.xml

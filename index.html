@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-page="home">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="Description"
             content="Vaibhav Gulati is a Software Developer and Technical Writer from India. He is certified in IT Automation by Google. He develops useful software solutions along with their walkthroughs."
@@ -13,338 +15,315 @@
             name="Keywords"
             content="Vaibhav, Gulati, Python, Software, Development, Generative-AI, Portfolio, Blogs"
         />
+        <meta property="og:title" content="Vaibhav Gulati - Portfolio" />
+        <meta property="og:description" content="Data Engineer and Technical Content Writer from India." />
+        <meta property="og:image" content="https://gulvaibhav20.github.io/images/social_media_cover.png" />
+        <meta property="og:url" content="https://gulvaibhav20.github.io/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#1a1d20" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="favicon.png" />
+        <link rel="manifest" href="site.webmanifest" />
         <title>Vaibhav Gulati's Portfolio</title>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vaibhav Gulati",
+            "url": "https://gulvaibhav20.github.io/",
+            "image": "https://gulvaibhav20.github.io/images/dp.jpeg",
+            "jobTitle": "Data Engineer",
+            "worksFor": { "@type": "Organization", "name": "Redica Systems" },
+            "email": "mailto:gulvaibhav20@gmail.com",
+            "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+            "alumniOf": "Bharati Vidyapeeth's College of Engineering",
+            "sameAs": [
+                "https://github.com/gulvaibhav20",
+                "https://www.linkedin.com/in/vaibhav-gulati",
+                "https://twitter.com/gulvaibhav20",
+                "https://gulvaibhav20.hashnode.dev",
+                "https://www.hackerrank.com/gulvaibhav20"
+            ]
+        }
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link rel="stylesheet" href="main.css" />
         <script>
-            window.onload = function () {};
+            (function () {
+                const saved = localStorage.getItem("theme");
+                document.documentElement.setAttribute("data-theme", saved || "dark");
+            })();
         </script>
+        <link rel="stylesheet" href="main.css" />
+        <script src="experience.js" defer></script>
+        <script src="theme.js" defer></script>
     </head>
     <body>
+        <svg class="svg-sprite" aria-hidden="true">
+            <symbol id="icon-moon" viewBox="0 0 16 16">
+                <path d="M8.067 14.667a6.5 6.5 0 0 1-2.625-.534 6.9 6.9 0 0 1-2.134-1.441 6.9 6.9 0 0 1-1.441-2.134 6.5 6.5 0 0 1-.534-2.625q0-2.433 1.55-4.291 1.55-1.86 3.95-2.309-.3 1.65.184 3.225a6.6 6.6 0 0 0 1.666 2.759 6.6 6.6 0 0 0 2.759 1.666 6.7 6.7 0 0 0 3.225.184q-.435 2.4-2.3 3.95-1.867 1.55-4.3 1.55m0-1.334q1.466 0 2.716-.733a5.3 5.3 0 0 0 1.967-2.017 8.3 8.3 0 0 1-2.717-.725 7.9 7.9 0 0 1-2.3-1.608 8 8 0 0 1-1.616-2.3A7.9 7.9 0 0 1 5.4 3.233a5.2 5.2 0 0 0-2.008 1.975 5.37 5.37 0 0 0-.725 2.725q0 2.25 1.575 3.825t3.825 1.575" fill="currentColor" />
+            </symbol>
+            <symbol id="icon-sun" viewBox="0 0 16 16">
+                <path d="M7.273 2.91V0h1.454v2.91zm4.836 2-1-1 2.037-2.092 1.018 1.037zm.982 3.817V7.273H16v1.454zM7.273 16v-2.91h1.454V16zM3.89 4.873 1.818 2.855l1.037-1.019 2.054 2.055zm9.236 9.309L11.11 12.09l.982-.982 2.073 2zM0 8.727V7.273h2.91v1.454zm2.855 5.455-1.019-1.037 2.037-2.036.527.491.527.51zM8 12.364q-1.818 0-3.09-1.273Q3.635 9.818 3.635 8T4.91 4.91Q6.182 3.635 8 3.635t3.09 1.273Q12.365 6.182 12.365 8t-1.273 3.09Q9.818 12.365 8 12.365m0-1.455q1.2 0 2.055-.854.854-.855.854-2.055t-.854-2.055A2.8 2.8 0 0 0 8 5.091q-1.2 0-2.055.854A2.8 2.8 0 0 0 5.091 8q0 1.2.854 2.055.855.854 2.055.854" fill="currentColor" />
+            </symbol>
+            <symbol id="icon-github" viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-twitter" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-instagram" viewBox="0 0 24 24">
+                <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122s-.013 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.9 4.9 0 0 1-1.153 1.772 4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06s-3.056-.013-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.772-1.153 4.9 4.9 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12s.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.9 4.9 0 0 1 1.153-1.772A4.9 4.9 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2m0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10m6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-hashnode" viewBox="0 0 24 24">
+                <path d="M22.351 8.019 15.982 1.65a5.624 5.624 0 0 0-7.965 0L1.648 8.019a5.624 5.624 0 0 0 0 7.965l6.369 6.369a5.624 5.624 0 0 0 7.965 0l6.369-6.369a5.624 5.624 0 0 0 0-7.965M12 15.405a3.403 3.403 0 1 1 0-6.806 3.403 3.403 0 0 1 0 6.806" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-hackerrank" viewBox="0 0 24 24">
+                <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .642 1.116.642 10.886 0 12S13.285 24 12 24s-9.75-4.886-10.392-6-.642-10.886 0-12S10.715 0 12 0m2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.813c0-.141-.114-.258-.258-.258H8.27c-.142 0-.258.115-.258.258v10.366c0 .142.115.258.258.258h1.435c.141 0 .258-.115.258-.258v-4.153h4.074s.006 4.153 0 4.153c0 .142.114.258.258.258h1.434c.141 0 .258-.115.258-.258V6.813c0-.141-.115-.258-.258-.258h-1.434Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-mail" viewBox="0 0 24 24">
+                <path d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2 8-5H4zM4 8V6v12z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-cv" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm4 18H6V4h7v5h5zM8 12v2h8v-2zm0 4v2h5v-2z" fill="currentColor"/>
+            </symbol>
+        </svg>
         <header class="header">
             <div class="logo_div">
                 <a href="index.html" class="logo"><strong>VG</strong> <span>Portfolio</span></a>
             </div>
-            <div class="main-menu">
-                <a href="index.html" class="nav_item">Home</a>
+            <nav class="main-menu">
                 <a href="#about-me" class="nav_item">About</a>
+                <a href="#experience" class="nav_item">Experience</a>
                 <a href="#projects" class="nav_item">Projects</a>
-                <a href="#social-media-handles" class="nav_item">Contact</a>
-                <a href="articles.html" class="nav_item">Articles</a>
-                <a target="_blank" href="https://gulvaibhav20.hashnode.dev" class="nav_item">
-                    Blogs</a
-                >
-                <!-- <a href="coming_soon.html" class="nav_item">Sponsor</a> -->
-            </div>
+                <a href="articles.html" class="nav_item">Writing</a>
+                <a href="#social-media-handles" class="nav-cta">Contact</a>
+            </nav>
+            <label class="theme-toggle-label" aria-label="Toggle theme">
+                <input id="theme-toggle" class="toggle" type="checkbox" />
+                <span class="toggle-thumb">
+                    <svg class="toggle-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-moon"></use></svg>
+                    <svg class="toggle-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-sun"></use></svg>
+                </span>
+            </label>
         </header>
-        <div>
-            <main>
-                <div class="banner">
-                    <div class="intro">
-                        <h1>Hi, I'm Vaibhav Gulati</h1>
-                        <div class="intro-content">
-                            <p>
-                                Data Engineer and Technical Content Writer<br />
-                                from India.
-                            </p>
-                        </div>
-                        <a href="#projects" class="btn btn-one"
-                            ><span><strong>My Projects</strong></span></a
-                        >
+        <main>
+            <div class="banner">
+                <div class="intro">
+                    <h1>Hi, I'm Vaibhav Gulati</h1>
+                    <div class="intro-content">
+                        <p>
+                            Data Engineer and Technical Content Writer<br />
+                            from India.
+                        </p>
                     </div>
-                    <div class="into-image">
-                        <img class="dp" src="images/dp.jpeg" alt="Vaibhav Gulati" />
+                    <div class="banner-buttons">
+                        <a href="#projects" class="cta cta-filled">
+                            <span>My Projects</span>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="media/Resume.pdf" class="cta">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#icon-cv"></use></svg>
+                            <span>My Resume</span>
+                        </a>
                     </div>
                 </div>
-                <section id="about-me">
-                    <div class="about">
-                        <h2>About Me.</h2>
-                        <div class="about-content">
-                            <p>
-                                I'm a methodical and innovative software engineer with expertise in
-                                data engineering, AI-driven solutions, and backend development.
-                                Currently working as Data Engineer at
-                                <a target="_blank" href="https://www.bt.com/"
-                                    ><dfn data-info="Data Engineer @ BT Group">BT Group</dfn></a
-                                >, Bangalore, Karnataka, India. With a knack for optimizing
-                                processes using Python, and
-                                <dfn
-                                    data-info="Generative-AI, PySpark, Azure, NLP, SQL, SpringBoot, System Design, etc."
-                                    >other tools</dfn
-                                >, I lead data-driven projects that enhance efficiency and
-                                decision-making. From designing creative AI solutions to automating
-                                complex workflows, I love turning technical challenges into
-                                impactful results. When I`m not coding, you`ll find me sharing
-                                insights through
-                                <a target="_blank" href="https://gulvaibhav20.hashnode.dev"
-                                    ><dfn data-info="Find me @ Hashnode">technical blogs</dfn></a
-                                >
-                                or playing football, chess, and PC games. Also, I am a die hard MCU,
-                                FC Barcelona and
-                                <a
-                                    target="_blank"
-                                    href="https://youtu.be/jCITfDozWGo?feature=shared"
-                                    ><dfn data-info="Google -> Messi's 500th goal"
-                                        >Lionel Messi</dfn
-                                    ></a
-                                >
-                                fan. <br /><br />
-                                Let`s connect and explore new possibilities together via my
-                                <a href="#social-media-handles"
-                                    ><dfn data-info="Meet me @Instagram, Twitter and Linkedin"
-                                        >social media handles</dfn
-                                    ></a
-                                >
-                                !
-                            </p>
-                        </div>
-                        <a target="_blank" href="media/Resume.pdf" class="btn btn-one"
-                            ><span><strong>My Resume</strong></span></a
-                        >
-                    </div>
-                </section>
-                <section id="projects">
-                    <div class="about">
-                        <h2>Projects.</h2>
-                        <div class="about-content">
-                            <p>
-                                I've been exploring, designing and developing various projects
-                                primarily using Python.<br />Some of my favourites are listed below.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="project-item-one-image">
-                            <a
-                                class="project-item-one"
-                                target="_blank"
-                                href="https://github.com/gulvaibhav20/soft-skill-evaluator"
-                            >
-                                <div class="project-item">
-                                    <h3>Research: Soft Skill Evaluator</h3>
-                                    <p>
-                                        Computer-vision based automated Soft Skills evaluation
-                                        system.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="project-item-two-image">
-                            <a
-                                class="project-item-two"
-                                target="_blank"
-                                href="https://github.com/gulvaibhav20/extractive-text-summarizer"
-                            >
-                                <div class="project-item">
-                                    <h3>Research: Article Summarization.</h3>
-                                    <p>Using Integrated BM25 and <br />Text Rank algorithm.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="project-item-three-image">
-                            <a
-                                class="project-item-three"
-                                target="_blank"
-                                href="https://github.com/gulvaibhav20/gulvaibhav20.github.io"
-                            >
-                                <div class="project-item">
-                                    <h3>Dev: Portfolio Website.</h3>
-                                    <p>A responsive portfolio website.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="project-item-four-image">
-                            <a
-                                class="project-item-four"
-                                target="_blank"
-                                href="https://github.com/gulvaibhav20/kol-data-standardization"
-                            >
-                                <div class="project-item">
-                                    <h3>Dev: KOL Data Standardization.</h3>
-                                    <p>
-                                        ETL utility for KOL (Key Opinion Leader)<br />
-                                        data profiling for healthcare and<br />
-                                        pharmaceutical companies.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="project-item-five-image">
-                            <a
-                                class="project-item-five"
-                                target="_blank"
-                                href="https://github.com/gulvaibhav20/Web-Scrapping"
-                            >
-                                <div class="project-item">
-                                    <h3>Dev: Web Scraping Scripts.</h3>
-                                    <p>
-                                        Collection of web scraping scripts<br />
-                                        written in Python.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="project-item-six-image">
-                            <a
-                                class="project-item-six"
-                                target="_blank"
-                                href="https://github.com/gulvaibhav20/Instagram-Style-Photo-Collage"
-                            >
-                                <div class="project-item">
-                                    <h3>Dev: Instagram Photo Collage.</h3>
-                                    <p>Create Instagram style collage of 5 pictures.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--<div class = "project">
-            <div class = "project-item-seven-image">
-              <a class = "project-item-seven" target="_blank" href="https://github.com/gulvaibhav20/">
-                  <div class = "project-item">
-                    <h3>Food Inventory App.</h3>
-                    <p>Cross-platform application for Food inventory management.</p>
-                  </div>
-              </a>
-            </div>
-            <div class = "project-item-eight-image">
-              <a class = "project-item-eight" target="_blank" href="https://github.com/gulvaibhav20/">
-                <div class = "project-item">
-                  <h3>Article Summarization.</h3>
-                  <p>Using Integrated BM25 and <br>Text Rank algorithm.</p>
+                <div class="intro-image">
+                    <img class="dp" src="images/dp.jpeg" alt="Vaibhav Gulati" />
                 </div>
-              </a>
             </div>
-          </div> -->
-                </section>
-                <section id="social-media-handles">
-                    <div class="contact">
-                        <h2>Contact.</h2>
-                        <div class="contact-content">
-                            <p>Feel free to connect with me via any of my social media links.</p>
-                            <h2>Let's Work Together.</h2>
-                            <p>Have a project you'd like to discuss?</p>
-                            <br />
-                        </div>
+            <section id="about-me">
+                <div class="about">
+                    <h2>About Me.</h2>
+                    <div class="about-content">
+                        <p>
+                            I'm a Data Engineer at
+                            <a target="_blank" rel="noopener noreferrer" href="https://redica.com/"
+                                ><dfn data-info="Data Engineer @ Redica Systems">Redica Systems</dfn></a
+                            >, Bengaluru — building scalable data acquisition pipelines on
+                            <dfn
+                                data-info="AWS, DynamoDB, Astronomer, Scrapy, Playwright, Snowflake, Python, etc."
+                                >AWS + Snowflake</dfn
+                            > that deliver regulatory &amp; inspection intelligence to leading
+                            pharmaceutical clients. Previously migrated enterprise data at
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.bt.com/"
+                                ><dfn data-info="Data Engineer @ BT Group">BT Group</dfn></a
+                            > and built GenAI + PySpark platforms at Incedo. I love turning
+                            complex data problems into reliable systems, and I share what I learn
+                            through
+                            <a target="_blank" rel="noopener noreferrer" href="https://gulvaibhav20.hashnode.dev"
+                                ><dfn data-info="Find me @ Hashnode">technical blogs</dfn></a
+                            >. <br /><br />
+                            Off the clock, you'll find me playing football, chess, or watching
+                            FC Barcelona and
+                            <a
+                                target="_blank" rel="noopener noreferrer"
+                                href="https://youtu.be/jCITfDozWGo?feature=shared"
+                                ><dfn data-info="Google -> Messi's 500th goal"
+                                    >Lionel Messi</dfn
+                                ></a
+                            >
+                            — a die-hard MCU fan on the side. Let's connect via my
+                            <a href="#social-media-handles"
+                                ><dfn data-info="Meet me @Instagram, Twitter and Linkedin"
+                                    >social media handles</dfn
+                                ></a
+                            >!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <div class="section-header">
+                    <h2>Experience.</h2>
+                    <div class="section-header-content">
+                        <p>
+                            4+ years shipping data engineering, backend, and GenAI systems.
+                        </p>
+                    </div>
+                </div>
+                <!-- Content rendered by experience.js from experienceData array -->
+                <ul class="exp-list" aria-label="Professional experience"></ul>
+            </section>
+            <section id="projects">
+                <div class="section-header">
+                    <h2>Projects.</h2>
+                    <div class="section-header-content">
+                        <p>
+                            I've been exploring, designing and developing various projects
+                            primarily using Python.<br />Some of my favourites are listed below.
+                        </p>
+                    </div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-item-one-image">
                         <a
-                            href="https://forms.gle/pqJ7L6CpYBzntu2M8"
-                            target="_blank"
-                            class="btn btn-one magnifyBtn"
-                            ><span><strong>Contact Me</strong></span></a
+                            class="project-item-one"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/gulvaibhav20/soft-skill-evaluator"
                         >
+                            <div class="project-item">
+                                <h3>Research: Soft Skill Evaluator</h3>
+                                <p>
+                                    Computer-vision based automated Soft Skills evaluation
+                                    system.
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="social_media_div">
-                        <figure id="social_media">
-                            <svg
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 1080 1382"
-                                preserveAspectRatio="xMinYMin meet"
-                            >
-                                <image
-                                    width="1080"
-                                    height="1382"
-                                    xlink:href="images/social_media.png"
-                                ></image>
-                                <a
-                                    target="_blank"
-                                    xlink:href="https://www.instagram.com/gulvaibhav20"
-                                >
-                                    <rect
-                                        x="460"
-                                        y="300"
-                                        fill="#000"
-                                        opacity="0"
-                                        width="80"
-                                        height="80"
-                                    />
-                                </a>
-                                <a
-                                    target="_blank"
-                                    xlink:href="https://www.hackerrank.com/gulvaibhav20"
-                                >
-                                    <rect
-                                        x="435"
-                                        y="115"
-                                        fill="#000"
-                                        opacity="0"
-                                        width="80"
-                                        height="80"
-                                    />
-                                </a>
-                                <a target="_blank" xlink:href="https://gulvaibhav20.hashnode.dev">
-                                    <rect
-                                        x="665"
-                                        y="85"
-                                        fill="#000"
-                                        opacity="0"
-                                        width="80"
-                                        height="80"
-                                    />
-                                </a>
-                                <a
-                                    target="_blank"
-                                    xlink:href="https://www.linkedin.com/in/vaibhav-gulati"
-                                >
-                                    <rect
-                                        x="815"
-                                        y="90"
-                                        fill="#000"
-                                        opacity="0"
-                                        width="80"
-                                        height="80"
-                                    />
-                                </a>
-                                <a target="_blank" xlink:href="https://github.com/gulvaibhav20">
-                                    <rect
-                                        x="950"
-                                        y="165"
-                                        fill="#000"
-                                        opacity="0"
-                                        width="80"
-                                        height="80"
-                                    />
-                                </a>
-                                <a target="_blank" xlink:href="https://twitter.com/gulvaibhav20">
-                                    <rect
-                                        x="925"
-                                        y="285"
-                                        fill="#000"
-                                        opacity="0"
-                                        width="80"
-                                        height="80"
-                                    />
-                                </a>
-                                <a target="_blank" xlink:href="https://gulvaibhav20.github.io/">
-                                    <circle
-                                        cx="710"
-                                        cy="380"
-                                        r="60"
-                                        stroke="none"
-                                        opacity="0"
-                                        fill="#000"
-                                    />
-                                </a>
-                            </svg>
-                        </figure>
+                    <div class="project-item-two-image">
+                        <a
+                            class="project-item-two"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/gulvaibhav20/extractive-text-summarizer"
+                        >
+                            <div class="project-item">
+                                <h3>Research: Article Summarization.</h3>
+                                <p>Using Integrated BM25 and <br />Text Rank algorithm.</p>
+                            </div>
+                        </a>
                     </div>
-                </section>
-                <div class="footer">
-                    <div class="footer-text">
-                        <center>© 2025 Vaibhav Gulati. All rights reserved.</center>
+                    <div class="project-item-three-image">
+                        <a
+                            class="project-item-three"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/gulvaibhav20/gulvaibhav20.github.io"
+                        >
+                            <div class="project-item">
+                                <h3>Dev: Portfolio Website.</h3>
+                                <p>A responsive portfolio website.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item-four-image">
+                        <a
+                            class="project-item-four"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/gulvaibhav20/kol-data-standardization"
+                        >
+                            <div class="project-item">
+                                <h3>Dev: KOL Data Standardization.</h3>
+                                <p>
+                                    ETL utility for KOL (Key Opinion Leader)<br />
+                                    data profiling for healthcare and<br />
+                                    pharmaceutical companies.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item-five-image">
+                        <a
+                            class="project-item-five"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/gulvaibhav20/Web-Scrapping"
+                        >
+                            <div class="project-item">
+                                <h3>Dev: Web Scraping Scripts.</h3>
+                                <p>
+                                    Collection of web scraping scripts<br />
+                                    written in Python.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item-six-image">
+                        <a
+                            class="project-item-six"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/gulvaibhav20/Instagram-Style-Photo-Collage"
+                        >
+                            <div class="project-item">
+                                <h3>Dev: Instagram Photo Collage.</h3>
+                                <p>Create Instagram style collage of 5 pictures.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </main>
-        </div>
+            </section>
+            <section id="social-media-handles">
+                <div class="contact">
+                    <h2>Let's Work Together.</h2>
+                    <p class="contact-subheading">Have a project you'd like to discuss? I'd love to hear about it — drop me a line or find me on LinkedIn.</p>
+                    <div class="cta-group">
+                        <a
+                            href="https://www.linkedin.com/in/vaibhav-gulati"
+                            target="_blank" rel="noopener noreferrer"
+                            class="cta cta-filled"
+                        >
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="socials-inline" aria-label="Social links">
+                    <a href="https://github.com/gulvaibhav20" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-github"></use></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vaibhav-gulati" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-linkedin"></use></svg>
+                    </a>
+                    <a href="https://twitter.com/gulvaibhav20" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-twitter"></use></svg>
+                    </a>
+                    <a href="https://www.instagram.com/gulvaibhav20" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-instagram"></use></svg>
+                    </a>
+                    <a href="https://gulvaibhav20.hashnode.dev" target="_blank" rel="noopener noreferrer" aria-label="Hashnode">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-hashnode"></use></svg>
+                    </a>
+                    <a href="https://www.hackerrank.com/gulvaibhav20" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-hackerrank"></use></svg>
+                    </a>
+                    <a href="mailto:gulvaibhav20@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><use href="#icon-mail"></use></svg>
+                    </a>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
